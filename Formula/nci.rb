@@ -4,17 +4,21 @@ class Nci < Formula
   version "0.3.4"
   license "MIT"
 
+  # Each sha256 carries a `# <asset-filename>` marker so the release workflow
+  # in Debbl/nci can locate which `.sha256` sidecar maps to which line. To
+  # add a new target, just add another url/sha256 pair with the matching
+  # marker — no workflow changes needed.
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-aarch64-apple-darwin.tar.gz"
-      sha256 "5ba8648187812b370564659677d1a995d55cebaf5aef21248e9c7bba4616f454"
+      sha256 "5ba8648187812b370564659677d1a995d55cebaf5aef21248e9c7bba4616f454" # nci-aarch64-apple-darwin.tar.gz
     else
       url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-apple-darwin.tar.gz"
-      sha256 "5e87ce4a15bedf9e288434a5e0435b8a30ebe50713a97ef0996f41e5881e30d1"
+      sha256 "5e87ce4a15bedf9e288434a5e0435b8a30ebe50713a97ef0996f41e5881e30d1" # nci-x86_64-apple-darwin.tar.gz
     end
   elsif OS.linux?
     url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "3ef26ce3d66a2cf38fb573f50e312e2a7c7314d7bc90d88945b0baaf98eb4972"
+    sha256 "3ef26ce3d66a2cf38fb573f50e312e2a7c7314d7bc90d88945b0baaf98eb4972" # nci-x86_64-unknown-linux-gnu.tar.gz
   end
 
   def install
