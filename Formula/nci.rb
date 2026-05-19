@@ -1,7 +1,7 @@
 class Nci < Formula
   desc "Use the right package manager (Rust port of @antfu/ni)"
   homepage "https://github.com/Debbl/nci"
-  version "0.3.4"
+  version "0.3.5"
   license "MIT"
 
   # Each sha256 carries a `# <asset-filename>` marker so the release workflow
@@ -11,14 +11,14 @@ class Nci < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-aarch64-apple-darwin.tar.gz"
-      sha256 "5ba8648187812b370564659677d1a995d55cebaf5aef21248e9c7bba4616f454" # nci-aarch64-apple-darwin.tar.gz
+      sha256 "57658015485140837b6cbe5b09b8e8d10babd058e8fe9737bfeed40251a81745" # nci-aarch64-apple-darwin.tar.gz
     else
       url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-apple-darwin.tar.gz"
-      sha256 "5e87ce4a15bedf9e288434a5e0435b8a30ebe50713a97ef0996f41e5881e30d1" # nci-x86_64-apple-darwin.tar.gz
+      sha256 "1df57fa65f76e397e611717564ee08bdcdc0e135c9c87c4e52d11c9fee156227" # nci-x86_64-apple-darwin.tar.gz
     end
   elsif OS.linux?
     url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "3ef26ce3d66a2cf38fb573f50e312e2a7c7314d7bc90d88945b0baaf98eb4972" # nci-x86_64-unknown-linux-gnu.tar.gz
+    sha256 "7b4688b71768a584f4c517681bf5850f530408437d9a213ead8b209e14ac3c28" # nci-x86_64-unknown-linux-gnu.tar.gz
   end
 
   def install
