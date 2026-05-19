@@ -1,13 +1,13 @@
 class Nci < Formula
   desc "Use the right package manager (Rust port of @antfu/ni)"
   homepage "https://github.com/Debbl/nci"
-  version "0.3.2"
+  version "0.3.4"
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-aarch64-apple-darwin.tar.gz"
-      sha256 "2900934a42d3976e59853138e5434f5a50eddbbbfa52a96ad35e5aaf1a2001f0"
+      url "https://github.com/Debbl/nci/releases/download/v0.3.4/nci-aarch64-apple-darwin.tar.gz"
+      sha256 "5ba8648187812b370564659677d1a995d55cebaf5aef21248e9c7bba4616f454"
     else
       url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-apple-darwin.tar.gz"
       sha256 "0ec99fb5a9e7740a26c4a938f84813b488232d908126fd6bf24d5c82f8e0740d"
