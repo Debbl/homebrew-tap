@@ -6,15 +6,15 @@ class Nci < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Debbl/nci/releases/download/v0.3.4/nci-aarch64-apple-darwin.tar.gz"
+      url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-aarch64-apple-darwin.tar.gz"
       sha256 "5ba8648187812b370564659677d1a995d55cebaf5aef21248e9c7bba4616f454"
     else
       url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-apple-darwin.tar.gz"
-      sha256 "0ec99fb5a9e7740a26c4a938f84813b488232d908126fd6bf24d5c82f8e0740d"
+      sha256 "5e87ce4a15bedf9e288434a5e0435b8a30ebe50713a97ef0996f41e5881e30d1"
     end
   elsif OS.linux?
     url "https://github.com/Debbl/nci/releases/download/v#{version}/nci-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "5bd33c52c290eee3f236ab089c3e91fbaca2601bcc67f2842d125834f5c40270"
+    sha256 "3ef26ce3d66a2cf38fb573f50e312e2a7c7314d7bc90d88945b0baaf98eb4972"
   end
 
   def install
